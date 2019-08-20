@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Nhập mã OTP/Token";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<div class="container" style="margin:10px">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-9">
+        @using (Html.BeginForm("InputOTP", "AccountPayment", FormMethod.Post))
+        {
+            <label>Xin vui lòng nhập mã OTP/Token</label>
+            <input type="text" name="otp" placeholder="Nhập mã OTP/Token" />
+            <input type="submit" value="Nhập" />
+            
+        }
+    </div>
+    
+</div>
+<div class="container">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-5" style="margin-left: 45px;">
+        <span style="color:red">
+            @if (ViewBag.ErrorOTP != null)
+            { @ViewBag.ErrorOTP }
+        </span>
+    </div>
+</div>

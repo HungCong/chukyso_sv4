@@ -1992,6 +1992,7 @@
     <Content Include="Views\AccountPayment\ErrorPayment.cshtml" />
     <Content Include="Views\AccountPayment\SuccessPayment.cshtml" />
     <Content Include="Views\AccountPayment\ErrorPayment_Confirm.cshtml" />
+    <Content Include="Views\AccountPayment\InputOTP.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

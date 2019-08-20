@@ -175,10 +175,30 @@ namespace WebDT.Controllers
                 admin.accountBalance += total;
                 _db.SaveChanges();
 
-                return Redirect("/thanh-toan-thanh-cong");
+                return Redirect("/nhap-ma-otp-token");
             }
 
         }
+
+        //Nhập mã OTP
+        public ActionResult InputOTP()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult InputOTP(string otp)
+        {
+            if(otp == "123456")
+            {
+                return Redirect("/thanh-toan-thanh-cong");
+            }else
+            {
+                ViewBag.ErrorOTP = "Mã OTP/Token không đúng, vui lòng nhập lại!!";
+                return View();
+            }
+        }
+
 
         public ActionResult success()
         {

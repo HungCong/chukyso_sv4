@@ -13,6 +13,14 @@ namespace WebDT
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+
+            routes.MapRoute(
+               name: "nhập mã OTP",
+               url: "nhap-ma-otp-token",
+               defaults: new { controller = "AccountPayment", action = "InputOTP", id = UrlParameter.Optional },
+               namespaces: new[] { "WebDT.Controllers" }
+           );
+
             routes.MapRoute(
                name: "thanh toán lỗi",
                url: "thanh-toan-loi",
